@@ -1,0 +1,15 @@
+{
+  "main": "src/Type.js",
+  "config": {
+    "pentaho/service": {
+      ".": "pentaho/type/value"
+    }
+  },
+  "scripts": {
+    "sandbox": "pentaho-viz-sandbox"
+  },
+  "themes": {
+    "default": "./themes/crystal",
+    "crystal": "./themes/crystal"
+  }
+}
