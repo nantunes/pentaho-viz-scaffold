@@ -8,7 +8,7 @@ module.exports = generators.Base.extend({
     this.local_pkg = this.fs.readJSON(this.destinationPath('package.json'), {});
 
     if(!this.local_pkg.name) {
-      this.local_pkg.name = this.determineAppname();
+      this.local_pkg.name = this.determineAppname().replace(/\s+/g, '-').toLowerCase();
     }
   },
 
