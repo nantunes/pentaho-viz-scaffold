@@ -98,6 +98,6 @@ module.exports = generators.Base.extend({
   },
 
   install: function () {
-    this.npmInstall(['git+https://github.com/carlosrusso/pentaho-platform-plugin-common-ui.git#BACKLOG-6020', 'pentaho-viz-sandbox'], {'save-dev': true});
+    this.npmInstall(['git+https://github.com/carlosrusso/pentaho-platform-plugin-common-ui.git#BACKLOG-6020', 'https://github.com/nantunes/pentaho-viz-sandbox'], {'save-dev': true});
   }
 });
