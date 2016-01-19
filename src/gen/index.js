@@ -87,17 +87,8 @@ module.exports = generators.Base.extend({
 
     scripts: function () {
       this.fs.copyTpl(
-        this.templatePath('src/Type.js'),
-        this.destinationPath('src/Type.js'),
-        {
-          name: this.local_pkg.name,
-          description: this.local_pkg.description
-        }
-      );
-
-      this.fs.copyTpl(
-        this.templatePath('src/View.js'),
-        this.destinationPath('src/View.js'),
+        this.templatePath('src/*.js'),
+        this.destinationPath('src'),
         {
           name: this.local_pkg.name,
           description: this.local_pkg.description
@@ -107,6 +98,6 @@ module.exports = generators.Base.extend({
   },
 
   install: function () {
-    this.npmInstall(['pentaho-viz-api', 'pentaho-viz-sandbox'], {'save-dev': true});
+    this.npmInstall(['git+https://github.com/carlosrusso/pentaho-platform-plugin-common-ui.git#BACKLOG-6020', 'pentaho-viz-sandbox'], {'save-dev': true});
   }
 });

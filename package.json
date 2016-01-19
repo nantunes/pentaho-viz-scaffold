@@ -1,9 +1,10 @@
 {
   "name": "pentaho-viz-scaffold",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Scaffold out a pentaho viz-api 3.0 visualization",
+  "private": true,
+  "author": "Nelson Antunes <nelson.antunes@webdetails.pt>",
   "license": "MIT",
-  "author": "nelson.antunes@webdetails.pt",
   "main": "src/gen.js",
   "bin": {
     "pentaho-viz-scaffold": "src/gen.js"
@@ -23,6 +24,7 @@
   ],
   "dependencies": {
     "yeoman-generator": "^0.20.1",
-    "yeoman-environment": "^1.5.0"
+    "yeoman-environment": "^1.5.0",
+    "common-ui": "git+https://github.com/carlosrusso/pentaho-platform-plugin-common-ui.git#BACKLOG-6020"
   }
 }
