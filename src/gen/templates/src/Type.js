@@ -14,7 +14,7 @@ define([
           id: '<%= name %>',
           v2Id: '<%= name %>',
 
-          view: "<%= name %>/src/View",
+          view: "src/View",
           styleClass: '<%= name %>-style',
           props: [
             {
