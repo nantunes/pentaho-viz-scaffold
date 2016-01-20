@@ -1,6 +1,6 @@
 {
   "name": "pentaho-viz-scaffold",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "private": true,
   "description": "Scaffold out a pentaho viz-api 3.0 visualization",
   "license": "MIT",
@@ -24,6 +24,6 @@
   "dependencies": {
     "yeoman-generator": "^0.20.1",
     "yeoman-environment": "^1.5.0",
-    "common-ui": "git+https://github.com/carlosrusso/pentaho-platform-plugin-common-ui.git#BACKLOG-6020"
+    "common-ui": "https://github.com/pentaho/pentaho-platform-plugin-common-ui"
   }
 }
