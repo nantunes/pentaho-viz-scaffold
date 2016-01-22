@@ -11,11 +11,11 @@ define([
 
     return Visual.extend({
         meta: {
-          id: '<%= name %>',
-          v2Id: '<%= name %>',
+          id: "<%= name %>",
+          v2Id: "<%= name %>",
 
           view: "src/View",
-          styleClass: '<%= name %>-style',
+          styleClass: "<%= name %>-style",
           props: [
             {
               name: "measure",

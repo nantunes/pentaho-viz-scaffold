@@ -1,6 +1,6 @@
 {
   "name": "pentaho-viz-scaffold",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "private": true,
   "description": "Scaffold out a pentaho viz-api 3.0 visualization",
   "license": "MIT",
