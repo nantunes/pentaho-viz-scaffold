@@ -1,13 +1,21 @@
 define([
   "pentaho/visual/base/modelFactory",
+  "pentaho/type/facets/DiscreteDomain",
   "pentaho/i18n!Type"
-], function(visualFactory, bundle) {
+], function(visualFactory, DiscreteDomainRefinementFacet, bundle) {
 
   "use strict";
 
   return function(context) {
 
     var Visual = context.get(visualFactory);
+
+    var Operations = context.get("pentaho/type/string").refine({
+      meta: {
+        facets: DiscreteDomainRefinementFacet,
+        domain: ["min", "max", "avg", "sum"]
+      }
+    });
 
     return Visual.extend({
         meta: {
@@ -23,11 +31,8 @@ define([
             },
             {
               name: "operation",
-              type: {
-                base: "string",
-                domain: ["min", "max", "avg", "sum"]
-              },
-              value: "min"
+              required: true,
+              type: Operations
             }
           ]
         }

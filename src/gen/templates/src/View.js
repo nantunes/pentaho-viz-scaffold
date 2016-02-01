@@ -69,15 +69,20 @@ define([
 
       var getValue = function(k) {
         var v = dataTable.getValue(k, measureOrdinal);
-          return !isNaN(v) && v != null ? v : null;
+        return !isNaN(v) && v != null ? v : null;
       };
+
       var i;
 
       var value = null;
-      var op = this.model.getv("operation").toUpperCase();
+      var op = this.model.getv("operation");
 
-      switch(op) {
-        case "MAX":
+      if (!op) {
+        return null;
+      }
+
+      switch (op) {
+        case "max":
           for (i = 0; i < R; i++) {
             var vi = getValue(i);
 
@@ -88,7 +93,7 @@ define([
 
           break;
 
-        case "MIN":
+        case "min":
           for (i = 0; i < R; i++) {
             var vi = getValue(i);
 
@@ -99,10 +104,10 @@ define([
 
           break;
 
-        case "AVG":
+        case "avg":
           var total = 0;
 
-          if(R) {
+          if (R) {
             for (i = 0; i < R; i++) {
               var vi = getValue(i);
 
@@ -117,9 +122,18 @@ define([
           }
           break;
 
-        default:
-          window.alert("Invalid operation!");
-          value = undefined;
+        case "sum":
+          value = 0;
+
+          for (i = 0; i < R; i++) {
+            var vi = getValue(i);
+
+            if (vi != null) {
+              value += vi;
+            }
+          }
+
+          break;
       }
 
       return value;
